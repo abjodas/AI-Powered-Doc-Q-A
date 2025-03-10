@@ -33,7 +33,7 @@ if uploaded_file:
   embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
   vector_db = FAISS.from_documents(chunks, embeddings)
   retriever = vector_db.as_retriever()
-  llm = ChatOpenAI(model_name='gpt-4o-mini', openai_api_key='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')
+  llm = ChatOpenAI(model_name='gpt-4o-mini', openai_api_key='key')
 
   system_prompt = (
     "You are a helpful assistant. Use the given context to answer the question."
